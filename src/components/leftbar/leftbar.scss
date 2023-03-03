@@ -1,0 +1,60 @@
+.leftbar {
+  flex: 2;
+  position: sticky;
+  top: 70px;
+  height: calc(100vh - 70px);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  border-right: 1px solid #ccc;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  background-color: themed('bg');
+  color: themed('textColor');
+  .container {
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .menu {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      padding: 5px;
+      border-bottom: 1px solid #ccc;
+      span {
+        font-size: 14px;
+        font-weight: 900;
+      }
+      .user {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        img {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          object-fit: cover;
+          border: 3px solid #7d7c7c;
+        }
+        span {
+          font-size: 14px;
+        }
+      }
+      .item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        img {
+          width: 30px;
+        }
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

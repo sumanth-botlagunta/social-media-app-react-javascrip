@@ -11,7 +11,7 @@ import { Login, Register, Home, Profile } from './pages';
 import { Navbar, Leftbar, Rightbar } from './components';
 
 const App = () => {
-  let currentUser = true;
+  var currentUser = true;
 
   const Layout = () => {
     return (
@@ -19,7 +19,9 @@ const App = () => {
         <Navbar />
         <div className="home-container" style={{ display: 'flex' }}>
           <Leftbar />
-          <Outlet />
+          <div style={{ flex: '7' }}>
+            <Outlet />
+          </div>
           <Rightbar />
         </div>
       </div>
