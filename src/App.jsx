@@ -9,13 +9,16 @@ import {
 
 import { Login, Register, Home, Profile } from './pages';
 import { Navbar, Leftbar, Rightbar } from './components';
+import { DarkModeContext } from './context/darkModeContext';
 
 const App = () => {
   var currentUser = true;
 
+  const { darkMode } = React.useContext(DarkModeContext);
+
   const Layout = () => {
     return (
-      <div className="theme-dark">
+      <div className={`theme-${darkMode ? 'dark' : 'light'}`}>
         <Navbar />
         <div className="home-container" style={{ display: 'flex' }}>
           <Leftbar />

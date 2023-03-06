@@ -25,6 +25,10 @@
         text-shadow: 0 0 10px themed('logoShadow');
         text-transform: lowercase;
       }
+      .icon {
+        color: themed('textColor');
+        cursor: pointer;
+      }
       .search {
         display: flex;
         align-items: center;
