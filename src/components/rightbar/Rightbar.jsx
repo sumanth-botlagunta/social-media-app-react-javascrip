@@ -20,10 +20,10 @@ const Rightbar = () => {
             </div>
             <div className="buttons">
               <button>
-                <PersonAddAltOutlinedIcon />
+                <PersonAddAltOutlinedIcon className="btn-icon" />
               </button>
               <button>
-                <CancelOutlinedIcon />
+                <CancelOutlinedIcon className="btn-icon" />
               </button>
             </div>
           </div>
@@ -37,10 +37,10 @@ const Rightbar = () => {
             </div>
             <div className="buttons">
               <button>
-                <PersonAddAltOutlinedIcon />
+                <PersonAddAltOutlinedIcon className="btn-icon" />
               </button>
               <button>
-                <CancelOutlinedIcon />
+                <CancelOutlinedIcon className="btn-icon" />
               </button>
             </div>
           </div>

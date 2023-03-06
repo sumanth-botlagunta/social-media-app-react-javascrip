@@ -1,11 +1,10 @@
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  border: 0;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
   font-family: 'Poppins', sans-serif;
 }
-
 $themes: (
   light: (
     textColor: #000,
@@ -13,7 +12,8 @@ $themes: (
     logo: darkblue,
     bgSoft: #f6f3f3,
     textColorSoft: #555,
-    border: lightgray,
+    border: #ccc,
+    logoShadow: #585b5bd2,
   ),
   dark: (
     textColor: whitesmoke,
@@ -22,6 +22,7 @@ $themes: (
     bgSoft: #333,
     textColorSoft: lightgray,
     border: #444,
+    logoShadow: #e0ebeda6,
   ),
 );
 
@@ -56,5 +57,12 @@ $themes: (
 @mixin tablet {
   @media (max-width: 960px) {
     @content;
+  }
+}
+
+* {
+  @include themify($themes) {
+    color: themed('textColor');
+    background-color: themed('bg');
   }
 }
