@@ -10,9 +10,10 @@ import {
 import { Login, Register, Home, Profile } from './pages';
 import { Navbar, Leftbar, Rightbar } from './components';
 import { DarkModeContext } from './context/darkModeContext';
+import { AuthContext } from './context/authContext';
 
 const App = () => {
-  var currentUser = true;
+  var { userAuth } = React.useContext(AuthContext);
 
   const { darkMode } = React.useContext(DarkModeContext);
 
@@ -32,7 +33,7 @@ const App = () => {
   };
 
   const ProtectedRoute = ({ children }) => {
-    if (!currentUser) {
+    if (!userAuth) {
       return <Navigate to="/signin" />;
     }
     return children;
